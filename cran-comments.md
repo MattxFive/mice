@@ -1,22 +1,67 @@
 cran-comments
 ================
 
-## mice 3.14.0
+## mice 3.15.0
 
 New submission.
 
 ## Reason
 
-A report from CRAN indicates that `install.on.demand()` breaks the CRAN
-work flow, so an urgent update is needed. In addition, there are many
-changes and improvements since the last CRAN version 3.13.0 published in
-Jan 2021.
+`mice 3.15.0` contains many changes and enhancements over `mice 3.14.0`
 
 ## Test environments
 
--   local OS X install, 11.6, R 4.1.2
--   win-builder
--   Rhub
+### Local
+
+``` r
+R.Version()
+```
+
+    ## $platform
+    ## [1] "aarch64-apple-darwin20"
+    ## 
+    ## $arch
+    ## [1] "aarch64"
+    ## 
+    ## $os
+    ## [1] "darwin20"
+    ## 
+    ## $system
+    ## [1] "aarch64, darwin20"
+    ## 
+    ## $status
+    ## [1] ""
+    ## 
+    ## $major
+    ## [1] "4"
+    ## 
+    ## $minor
+    ## [1] "2.1"
+    ## 
+    ## $year
+    ## [1] "2022"
+    ## 
+    ## $month
+    ## [1] "06"
+    ## 
+    ## $day
+    ## [1] "23"
+    ## 
+    ## $`svn rev`
+    ## [1] "82513"
+    ## 
+    ## $language
+    ## [1] "R"
+    ## 
+    ## $version.string
+    ## [1] "R version 4.2.1 (2022-06-23)"
+    ## 
+    ## $nickname
+    ## [1] "Funny-Looking Kid"
+
+### win-builder
+
+### \* Rhub
 
 ## Local check
 
@@ -28,7 +73,7 @@ build()
 ```
 
 ``` bash
-R CMD CHECK mice_3.14.0.tar.gz
+R CMD CHECK mice_3.14.12.tar.gz
 ```
 
 Status: OK
@@ -39,7 +84,7 @@ Status: OK
 devtools::check_win_devel()
 ```
 
-Status: OK
+Status: 2 NOTES
 
 ## Rhub checks
 
@@ -49,9 +94,10 @@ devtools::check_rhub()
 
 Results:
 
-1.  Debian Linux, R-devel, GCC ASAN/UBSAN: Success
-2.  Ubuntu Linux 20.04.1 LTS, R-release, GCC: Success
-3.  Fedora Linux, R-devel, clang, gfortran: Success
+1.  Debian Linux, R-devel, GCC ASAN/UBSAN:
+2.  Windows Server 2022, R-devel, 64 bit: **Success**
+3.  Ubuntu Linux 20.04.1 LTS, R-release, GCC:
+4.  Fedora Linux, R-devel, clang, gfortran:
 
 ## Downstream dependencies
 
